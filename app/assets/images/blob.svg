@@ -1,0 +1,8 @@
+<svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <clipPath id="mask">
+    <circle class="cir-1"></circle>
+    <circle class="cir-2"></circle>
+    <circle class="cir-3"></circle>
+    <circle class="cir-4"></circle>
+   </clipPath>
+</svg>
