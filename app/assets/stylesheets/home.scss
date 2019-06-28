@@ -3,8 +3,68 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .md-site {
-  .mopping-container {
-    margin-top: 100px;
-    text-align: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
+}
+
+.bkg-image {
+  width: 270px;
+  display: block;
+  -webkit-clip-path: url(#mask)
+}
+
+svg,
+svg circle {
+  fill: #ee2d48;
+  width: 0;
+}
+
+@keyframes from0to360 {
+  from {
+    transform:rotate(0);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+.cir-1 {
+  animation: from0to360 3s linear infinite;
+  cx: 150;
+  cy: 145;
+  r: 100;
+  transform-origin: 145px 150px;
+}
+
+@keyframes from360to0 {
+  from{transform:rotate(360deg);}
+  to{transform:rotate(0deg);}
+}
+
+.cir-2 {
+  animation: from360to0 5s linear infinite;
+  cx: 150;
+  cy: 155;
+  r: 100;
+  transform-origin: 155px 150px;
+}
+
+.cir-3 {
+  animation: from0to360 6s linear infinite;
+  cx: 145;
+  cy: 150;
+  r: 100;
+  transform-origin: 150px 145px;
+}
+
+.cir-4 {
+  animation: from360to0 2.5s linear infinite;
+  cx: 155;
+  cy: 150;
+  r: 100;
+  transform-origin: 150px 155px;
 }
