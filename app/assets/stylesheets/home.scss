@@ -60,6 +60,7 @@ a {
   font-family: "Mont-Black";
   font-size: calc(1em + 10vw); 
   margin-bottom: 0;
+  text-align: center;
 }
 
 .h2 {
@@ -77,7 +78,7 @@ a {
   width: 60vw;
   animation: blob 7s ease-in-out alternate infinite;
   
-  @media (min-width: 899px) {
+  @include for-desktop-up {
     height: 20em;
     width: 20em;
   }
