@@ -67,28 +67,28 @@ a {
   
   @include for-desktop-up {
     letter-spacing: 0;
+    font-size: calc(((1em + 9vw)*2)/4);
   }
 }
 
 .h2 {
   font-family: 'DM Serif Text', serif;
   font-weight: normal;
-  font-size: calc(1em + 3.01vw);
+  font-size: calc(1em + 2.65vw);
   margin-top: 0;
   text-align: center;
+  
+  @include for-desktop-up {
+    font-size: calc(((1em + 2.65vw)*2)/4);
+  }
 }
 
 .image-profile {
-  border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
-  height: 30vh;
-  object-fit: cover;
-  width: 60vw;
   animation: blob 7s ease-in-out alternate infinite;
-  
-  @include for-desktop-up {
-    height: 20em;
-    width: 20em;
-  }
+  border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
+  height: calc((50vw + 50vh)/4);
+  object-fit: cover;
+  width: calc((50vw + 50vh)/4);
 }
 
 @keyframes blob {
