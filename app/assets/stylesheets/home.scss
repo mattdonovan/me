@@ -4,12 +4,23 @@ $blob-colors: $color-aqua, $color-red, $color-blue, $color-green, $color-yellow,
 
 html {
   color: $color-black;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
 }
 
 body { 
   font-size: 1.6em;
   background-color: $color-beige;
+}
+
+a {
+  color: $color-green;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  
+  &:hover {
+    color: $color-aqua;
+  }
 }
 
 .blobs {
@@ -48,6 +59,15 @@ body {
 .h1 { 
   font-family: "Mont-Black";
   font-size: calc(1em + 10vw); 
+  margin-bottom: 0;
+}
+
+.h2 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal;
+  font-size: calc(1em + 3.01vw);
+  margin-top: 0;
+  text-align: center;
 }
 
 .image-profile {
