@@ -5,7 +5,14 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = csrf_meta_tags
     = csp_meta_tag 
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag
+    = favicon_link_tag 'apple-touch-icon.png', rel:'apple-touch-icon', type: 'image/png', sizes: '180x180'
+    = favicon_link_tag 'favicon-32x32.png', rel:'icon', type:'image/png', sizes:'32x32'
+    = favicon_link_tag 'favicon-16x16.png', rel:'icon', type:'image/png', sizes:'16x16'
+    = favicon_link_tag 'safari-pinned-tab.svg', rel:'mask-icon', color:'#5bbad5'
+    meta name='msapplication-TileColor' content='#f4f2ee'
+    meta name='theme-color' content='#f4f2ee'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = yield
