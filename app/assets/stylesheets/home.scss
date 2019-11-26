@@ -13,7 +13,7 @@ body {
 }
 
 .blobs {
-  margin-top: 5em;
+  margin: 5em 0 1em;
   position: relative;
 }
   
@@ -47,15 +47,20 @@ body {
 
 .h1 { 
   font-family: "Mont-Black";
-  font-size: 4.8em; 
+  font-size: calc(1em + 10vw); 
 }
 
 .image-profile {
   border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
-  height: 18em;
+  height: 30vh;
   object-fit: cover;
-  width: 18em;
+  width: 60vw;
   animation: blob 7s ease-in-out alternate infinite;
+  
+  @media (min-width: 899px) {
+    height: 20em;
+    width: 20em;
+  }
 }
 
 @keyframes blob {

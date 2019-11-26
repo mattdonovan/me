@@ -1,9 +1,17 @@
+// COLORS
 $color-aqua: #00A2C7;
-$color-beige: #F4F2EE;
-$color-black: #080A09;
+$color-beige: #F4F2EE;    // background color
+$color-black: #080A09;    // text color
 $color-blue: #004093;
 $color-green: #00A862;
 $color-orange: #F76200;
 $color-red: #CA0005;
 $color-yellow: #EFBD00;
 $color-white: #FFFFFF;
+
+// MEDIA QUERIES
+$desktop: 599px;
+
+@mixin for-desktop-up {
+  @media (min-width: $desktop) { @content; }
+}
