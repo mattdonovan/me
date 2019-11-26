@@ -8,7 +8,41 @@ html {
 body { 
   font-size: 1.6em;
   background-color: $color-beige;
- }
+}
+
+.blobs {
+  position: relative;
+}
+ 
+.blob-a {
+  border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
+  height: 100%;
+  left: -1em;
+  padding: 1em;
+  position: absolute;
+  animation: blob 7s ease-in-out alternate infinite;
+  background-color: $color-aqua;
+  mix-blend-mode: overlay;
+  top: -1em;
+  transform: rotate(15deg);
+  width: 100%; 
+  z-index: -100;
+}
+
+.blob-b {
+  border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
+  height: 100%;
+  left: -1em;
+  padding: 1em;
+  position: absolute;
+  animation: blob 7s ease-in-out alternate infinite;
+  background-color: $color-yellow;
+  mix-blend-mode: overlay;
+  top: -1em;
+  transform: rotate(-15deg);
+  width: 100%;   
+  z-index: -100;
+}
 
 .container {
   display: flex;
