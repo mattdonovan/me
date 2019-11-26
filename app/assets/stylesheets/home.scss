@@ -1,5 +1,7 @@
 @import 'variables';
 
+$blob-colors: $color-aqua, $color-red, $color-blue, $color-green, $color-yellow, $color-orange, $color-black;
+
 html {
   color: $color-black;
   font-size: 10px;
@@ -11,36 +13,27 @@ body {
 }
 
 .blobs {
+  margin-top: 5em;
   position: relative;
 }
- 
-.blob-a {
-  border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
-  height: 100%;
-  left: -1em;
-  padding: 1em;
-  position: absolute;
-  animation: blob 7s ease-in-out alternate infinite;
-  background-color: $color-aqua;
-  mix-blend-mode: overlay;
-  top: -1em;
-  transform: rotate(15deg);
-  width: 100%; 
-  z-index: -100;
+  
+@for $i from 1 through length($blob-colors) {
+  .blob:nth-child(#{length($blob-colors)}n+#{$i}) {
+    background-color: lighten(nth($blob-colors, $i), 0%);
+    transform: rotate(15deg * ($i * 7));
+    animation-delay: -($i * 10)+s;
+  } 
 }
 
-.blob-b {
+.blob {
   border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
   height: 100%;
   left: -1em;
   padding: 1em;
   position: absolute;
   animation: blob 7s ease-in-out alternate infinite;
-  background-color: $color-yellow;
-  mix-blend-mode: overlay;
   top: -1em;
-  transform: rotate(-15deg);
-  width: 100%;   
+  width: 100%; 
   z-index: -100;
 }
 
