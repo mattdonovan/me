@@ -1,5 +1,7 @@
 {
   "name": "personal",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "lottie-web": "^5.5.5"
+  }
 }

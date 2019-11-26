@@ -1,70 +1,35 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
 
-.md-site {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+html {
+  color: $color-black;
+  font-size: 10px;
 }
 
-.bkg-image {
-  width: 270px;
-  display: block;
-  -webkit-clip-path: url(#mask);
+body { 
+  font-size: 1.6em;
+  background-color: $color-beige;
+ }
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  height: 100%;
 }
 
-svg,
-svg circle {
-  fill: #ee2d48;
-  width: 0;
+.h1 { font-size: 4.8em; }
+
+.image-profile {
+  border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
+  height: 18em;
+  object-fit: cover;
+  width: 18em;
+  animation: blob 7s ease-in-out alternate infinite;
 }
 
-@keyframes from0to360 {
-  from {
-    transform:rotate(0);
-  }
-  to {
-    transform:rotate(360deg);
-  }
-}
-
-.cir-1 {
-  animation: from0to360 3s linear infinite;
-  cx: 150;
-  cy: 145;
-  r: 100;
-  transform-origin: 145px 150px;
-}
-
-@keyframes from360to0 {
-  from{transform:rotate(360deg);}
-  to{transform:rotate(0deg);}
-}
-
-.cir-2 {
-  animation: from360to0 5s linear infinite;
-  cx: 150;
-  cy: 155;
-  r: 100;
-  transform-origin: 155px 150px;
-}
-
-.cir-3 {
-  animation: from0to360 6s linear infinite;
-  cx: 145;
-  cy: 150;
-  r: 100;
-  transform-origin: 150px 145px;
-}
-
-.cir-4 {
-  animation: from360to0 2.5s linear infinite;
-  cx: 155;
-  cy: 150;
-  r: 100;
-  transform-origin: 150px 155px;
+@keyframes blob {
+  20%   { border-radius: 43em 19em 21em 39em / 23em 31em 29em 37em; }
+  60%   { border-radius: 37em 19em 41em 45em / 33em 51em 35em 37em; }
+  100%  { border-radius: 37em 39em 31em 39em / 33em 31em 39em 37em; }
 }
