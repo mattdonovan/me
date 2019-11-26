@@ -53,15 +53,21 @@ a {
   align-items: center;
   flex-flow: column;
   justify-content: center;
+  padding: 0;
   height: 100%;
   width: 100vw;
 }
 
 .h1 { 
   font-family: "Mont-Black";
-  font-size: calc(1em + 9vw); 
+  font-size: calc(1em + 9vw);
+  letter-spacing: -.025em; 
   margin-bottom: 0;
   text-align: center;
+  
+  @include for-desktop-up {
+    letter-spacing: 0;
+  }
 }
 
 .h2 {
