@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  root 'home#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :blogs
+  get 'blogs/index'
+  get 'blogs/new'
+  get 'blogs/create'
+  get 'blogs/show'
+  get 'blogs/edit'
+  root "home#index"
 end

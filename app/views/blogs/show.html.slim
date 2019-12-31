@@ -1,0 +1,8 @@
+h1 = @blog.title
+
+= link_to "Edit", edit_blog_path(@blog)
+= link_to "Delete", blog_path(@blog), method: :delete, data: { confirm: "Are you sure?"}
+
+br
+
+= raw @blog.body
