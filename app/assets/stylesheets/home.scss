@@ -18,6 +18,7 @@ body {
 a {
   color: $color-black;
   text-decoration: underline;
+  text-decoration-color: $color-green;
   transition: all 200ms ease-in-out;
   
   &:hover {
