@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :blogs
-  get 'blogs/index'
-  get 'blogs/new'
-  get 'blogs/create'
-  get 'blogs/show'
-  get 'blogs/edit'
+  resources :posts
+  get 'posts/index'
+  get 'posts/new'
+  get 'posts/create'
+  get 'posts/show'
+  get 'posts/edit'
   root "home#index"
 end

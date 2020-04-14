@@ -1,17 +1,27 @@
 // COLORS
 $color-aqua: #00A2C7;
-$color-beige: #F4F2EE;    // background color
+$color-beige: #F4F2EE;    // secondary background color
 $color-black: #080A09;    // text color
 $color-blue: #004093;
 $color-green: #00A862;
 $color-orange: #F76200;
 $color-red: #CA0005;
 $color-yellow: #EFBD00;
-$color-white: #FFFFFF;
+$color-white: #FFFFFF;    // primary backround color
+
+$link-background-color: lighten($color-green, 50%);
+
 
 // MEDIA QUERIES
-$desktop: 599px;
 
 @mixin for-desktop-up {
   @media (min-width: $desktop) { @content; }
+}
+
+// WIDTHS
+
+$desktop: 599px;
+
+@mixin legible-width {
+  max-width: 37.5rem;
 }

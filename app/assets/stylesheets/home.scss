@@ -1,3 +1,5 @@
+@import 'buttons';
+@import 'mixins';
 @import 'variables';
 
 $blob-colors: $color-aqua, $color-red, $color-blue, $color-green, $color-yellow, $color-orange, $color-black;
@@ -5,21 +7,22 @@ $blob-colors: $color-aqua, $color-red, $color-blue, $color-green, $color-yellow,
 html {
   color: $color-black;
   font-family: 'Roboto', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 body { 
-  font-size: 1.6em;
-  background-color: $color-beige;
+  font-size: 1.25rem;
+  background-color: $color-white;
 }
 
 a {
-  color: $color-green;
-  text-decoration: none;
+  color: $color-black;
+  text-decoration: underline;
   transition: all 200ms ease-in-out;
   
   &:hover {
-    color: $color-aqua;
+    background: $link-background-color;
+    text-decoration: none;
   }
 }
 
@@ -83,12 +86,44 @@ a {
   }
 }
 
+.header {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+
 .image-profile {
   animation: blob 7s ease-in-out alternate infinite;
   border-radius: 37em 19em 21em 39em / 23em 31em 29em 37em;
   height: calc((50vw + 50vh)/4);
   object-fit: cover;
   width: calc((50vw + 50vh)/4);
+}
+
+.legible-measure {
+  @include legible-width;
+}
+
+.post-title {
+  @include card;
+}
+
+.trix-content {
+  @include legible-width;
+  border: 0;
+  margin: 0 auto;
+}
+
+.trix-button-row {
+  @include card;
+  
+  .trix-button {
+    background: $color-white;
+  }
+  
+  .trix-button-group {
+    margin-bottom: 0;
+  }
 }
 
 @keyframes blob {
