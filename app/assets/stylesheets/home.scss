@@ -76,6 +76,7 @@ a {
   }
   
   &__svg {
+    background-color: $color-blue;
     background-image:image-url("type-blobs.svg");
     background-position: center;
     background-repeat: no-repeat;
