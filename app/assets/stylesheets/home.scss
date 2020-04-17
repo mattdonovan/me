@@ -58,21 +58,19 @@ a {
   align-items: center;
   flex-flow: column;
   justify-content: center;
-  padding: 0;
-  height: 100%;
-  width: 100vw;
+  padding: 0 1.25rem;
 }
 
 .h1 { 
   font-family: "Mont-Black";
-  font-size: calc(2em + 9vw);
-  letter-spacing: -.025em; 
-  margin-bottom: 0;
+  font-size: 4rem;
+  letter-spacing: -.025em;
+  line-height: 1.065em; 
+  margin-bottom: 1.5rem;
   text-align: center;
   
   @include for-desktop-up {
     letter-spacing: 0;
-    font-size: calc(((1em + 9vw)*2)/4);
   }
   
   &__svg {
@@ -89,13 +87,9 @@ a {
 .h2 {
   font-family: 'DM Serif Text', serif;
   font-weight: normal;
-  font-size: calc(1em + 2.65vw);
+  font-size: 1.5rem;
   margin-top: 0;
   text-align: center;
-  
-  @include for-desktop-up {
-    font-size: calc(((1em + 2.65vw)*2)/4);
-  }
 }
 
 .header {
