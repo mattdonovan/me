@@ -7,7 +7,8 @@ ruby '2.7.1'
 gem 'inline_svg'
 gem 'slim-rails'
 gem 'webpacker'
-gem "actiontext", require: "action_text"
+gem 'actiontext', require: 'action_text'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0'

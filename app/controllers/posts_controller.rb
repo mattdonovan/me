@@ -48,4 +48,7 @@ class PostsController < ApplicationController
   def posts_params
     params.require(:post).permit(:title, :body)
   end
+  
+  #This authenticates admin whenever a post is to be created, updated or destroyed.
+  before_action :authenticate_admin!, except: [:index, :show]
 end
