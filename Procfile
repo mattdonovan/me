@@ -1,3 +1,2 @@
-rails: rails s
-livereload: bundle exec guard -P livereload
+web: bundle exec rails server -p $PORT
 webpackdevserver: bin/webpack-dev-server
