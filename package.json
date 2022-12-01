@@ -8,6 +8,6 @@
     "trix": "^1.0.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.11.3"
   }
 }
